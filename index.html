@@ -69,12 +69,11 @@
       Start: January 5, 2026 – 09:00:00
     </div>
 
-    <h1>Milyen volt a szilveszter anyóssal?</h1>
   </main>
 
   <script>
-    // Start date: Jan 5, 2026, 09:00:00
-    const startDate = new Date(2026, 0, 5, 9, 0, 0);
+
+const startDate = new Date(2026, 0, 5, 9, 0, 0);
 
     const els = {
       days: document.getElementById('days'),
@@ -95,14 +94,10 @@
 
       const totalSeconds = Math.floor(diff / 1000);
       const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
+      
 
       els.days.textContent = days;          // no padding for days
-      els.hours.textContent = pad(hours);
-      els.minutes.textContent = pad(minutes);
-      els.seconds.textContent = pad(seconds);
+
     }
 
     update();
